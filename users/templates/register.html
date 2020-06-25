@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+  Register
+{% endblock title %}
+
+{% block content %}
+    <div>
+        <form method="POST">
+            {%csrf_token%}
+            <fieldset>
+                <legend>
+                    Join now
+                </legend>
+                {{form|crispy}}
+            </fieldset>
+         <div>
+            <button class="btn btn-outline-info" type="submit">
+                Sign up
+            </button>
+         </div>
+            
+
+
+        </form>
+
+
+        <div>
+            <small class="text-muted">
+                ALready hav an Account? <a href="{%url 'login'%}">sign in</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}

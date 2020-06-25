@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Register
+{% endblock title %}
+
+{% block content %}
+    <div>
+       <h1>You have beend logged out</h1>
+
+        <div>
+            <small class="text-muted">
+                Login Again? <a href="{%url 'login'%}">Login</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+  Create 
+{% endblock title %}
+
+{% block content %}
+    <div>
+        <form method="POST">
+            {%csrf_token%}
+            <fieldset>
+                <legend>
+                    Create Post
+                </legend>
+                {{form|crispy}}
+            </fieldset>
+         <div>
+            <button class="btn btn-outline-info" type="submit">
+                Create Post
+            </button>
+         </div>
+            
+
+
+        </form>
+
+
+       
+{% endblock content %}
